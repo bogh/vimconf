@@ -9,7 +9,23 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
 
+" Python specific
+Plugin 'vim-scripts/indentpython.vim'
+
+" NERDTree
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+Plugin 'tpope/vim-fugitive'
+
+" Golang specific
+
 call vundle#end() 
 
 filetype indent plugin on
+
+" NERDTree
+" Auto open on enter
+autocmd vimenter * NERDTree
+
 

@@ -16,12 +16,13 @@ set nostartofline
 set showmatch
 
 
-" Search highlighting
+" Search
+set incsearch
 set hlsearch
 nnoremap <C-L> :nohl<CR><C-L> " Clear highlight
 
 " visual bell
-set visualbell
+" set visualbell
 set t_vb=
 
 set mouse=a
@@ -67,3 +68,6 @@ augroup END " }
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
+
+set clipboard=unnamed
+

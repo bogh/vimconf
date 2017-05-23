@@ -12,4 +12,4 @@ au BufNewFile,BufRead *.py
 " White space
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-
+" Javascript 
