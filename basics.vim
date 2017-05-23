@@ -71,8 +71,9 @@ augroup END " }
 set foldmethod=indent
 set foldlevel=99
 
-set clipboard=unnamed
+" set clipboard=unnamed
 
 
 set colorcolumn=80
 
+set directory^=$HOME/.vim/tmp/

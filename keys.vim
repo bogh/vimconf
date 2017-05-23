@@ -1,3 +1,5 @@
+let mapleader = ","
+
 " duplicate line
 nnoremap <C-d> :t.<CR>
 
@@ -13,11 +15,13 @@ noremap <C-S-Down> :m .+1<CR>
 noremap <C-S-Up> :m .-2<CR>
 
 " clipboard
-vmap <C-S-c> "+y
-noremap <C-S-v> "+p
+vmap <C-Delete> "+y
+noremap <C-Insert> "+p
 
 " NERDTree
 map <C-k><C-b> :NERDTreeToggle<CR> 
 map <C-t> :NERDTreeFocus<CR> 
+nmap <leader>n :NERDTreeFind<CR>
   
 map <F9> :set wrap!<CR>
+

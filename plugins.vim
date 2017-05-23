@@ -19,6 +19,8 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 
+Plugin 'craigemery/vim-autotag'
+
 " Golang specific
 
 call vundle#end() 
@@ -29,4 +31,4 @@ filetype indent plugin on
 " Auto open on enter
 autocmd vimenter * NERDTree
 
-
+let g:autotagTagsFile="tags"
