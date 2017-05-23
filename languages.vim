@@ -1,3 +1,5 @@
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength '/\%100v.\+/'
 
 " Python
 au BufNewFile,BufRead *.py

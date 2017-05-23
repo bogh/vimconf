@@ -20,3 +20,4 @@ noremap <C-S-v> "+p
 map <C-k><C-b> :NERDTreeToggle<CR> 
 map <C-t> :NERDTreeFocus<CR> 
   
+map <F9> :set wrap!<CR>

@@ -17,6 +17,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
 
 " Golang specific
 

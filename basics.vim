@@ -12,6 +12,7 @@ set ignorecase
 set smartcase
 set autoindent
 set nostartofline
+set wrap
 
 set showmatch
 
@@ -54,6 +55,7 @@ if has("gui_running")
 	set guioptions-=r
 	set guioptions-=L
     set background=dark
+    set guifont=Monaco\ 9
     colorscheme solarized
 else
     colorscheme zenburn
@@ -70,4 +72,7 @@ set foldmethod=indent
 set foldlevel=99
 
 set clipboard=unnamed
+
+
+set colorcolumn=80
 
