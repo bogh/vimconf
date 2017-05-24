@@ -24,6 +24,8 @@ noremap <C-Insert> "+p
 map <C-k><C-b> :NERDTreeToggle<CR> 
 map <C-t> :NERDTreeFocus<CR> 
 nmap <leader>n :NERDTreeFind<CR>
+
+" Indent / Unindent
   
 map <F9> :set wrap!<CR>
 "

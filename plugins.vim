@@ -25,7 +25,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'vim-scripts/BufOnly.vim'
 
-Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
@@ -72,11 +72,12 @@ let g:pymode_options_colorcolumn = 1
 
 let g:pymode_quickfix_minheight = 3
 let g:pymode_quickfix_maxheight = 6
+let g:pymode_folding = 1
 
 let g:pymode_virtualenv = 1
 let g:pymode_virtualenv_path = $VIRTUAL_ENV
-
-let g:virtualenv_directory = "$HOME/work/environments/"
+let g:pymode_lint_ignore = "E501"
+"let g:virtualenv_directory = "$HOME/work/environments/"
 
 
 " TagBar

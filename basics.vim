@@ -57,10 +57,8 @@ if has("gui_running")
 	set guioptions-=L
     set background=dark
     set guifont=Monaco\ 9
-    colorscheme solarized
-else
-    colorscheme zenburn
 endif
+colorscheme Monokai
 
 " Auto reload vimrc after editing
 augroup reload_vimrc " {
