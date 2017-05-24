@@ -15,6 +15,7 @@ set nostartofline
 set wrap
 
 set showmatch
+set laststatus=2
 
 
 " Search
