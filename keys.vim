@@ -14,7 +14,7 @@ noremap <C-S-Down> :m .+1<CR>
 noremap <C-S-Up> :m .-2<CR>
 
 noremap <Leader>bd :bdelete<CR> " Close current buffer
-noremap <Leader>ba :bufdo bd<CR> " Close all other buffers
+noremap <Leader>ba :BufOnly<CR> " Close all other buffers
 
 " clipboard
 vmap <C-Delete> "+y
@@ -30,3 +30,23 @@ nmap <leader>n :NERDTreeFind<CR>
 map <F9> :set wrap!<CR>
 "
 noremap <Leader>cd :cd %:p:h<CR> " CD into directory of current file
+
+" TagBar
+nmap <F8> :TagbarToggle<CR>
+
+" YCM Shortcuts
+nnoremap <leader>d :YcmCompleter GoTo<CR>
+
+noremap <C-Tab> :bnext<CR>
+noremap <C-S-Tab> :bprevious<CR>
+
+" CtrlP
+noremap <leader>r :CtrlPBufTag<CR>
+
+" Golang
+noremap <leader>.b :GoBuild<CR>
+noremap <leader>.d :GoDecls<CR>
+noremap <leader>.l :GoDeclsDir<CR>
+noremap <leader>.p :GoImport
+noremap <leader>.g :GoDef<CR>
+

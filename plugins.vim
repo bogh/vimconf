@@ -13,28 +13,25 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'python-mode/python-mode'
 Plugin 'jmcantrell/vim-virtualenv'
-
 Plugin 'Valloric/YouCompleteMe'
-
 Plugin 'jiangmiao/auto-pairs'
-
-" NERDTree
 Plugin 'scrooloose/nerdtree'
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Plugin 'ap/vim-buftabline'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'vim-scripts/BufOnly.vim'
-
 " Plugin 'tpope/vim-fugitive'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'airblade/vim-gitgutter'
-
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'airblade/vim-gitgutter'
 " Plugin 'craigemery/vim-autotag'
 " Plugin 'xolox/vim-easytags'
 " Plugin 'xolox/vim-misc'
 Plugin 'majutsushi/tagbar'
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'kien/ctrlp.vim'
+Plugin 'fatih/vim-go'
+Plugin 'Yggdroot/indentLine'
 
 
 " Golang specific
@@ -75,13 +72,36 @@ let g:pymode_quickfix_maxheight = 6
 let g:pymode_folding = 1
 
 let g:pymode_virtualenv = 1
-let g:pymode_virtualenv_path = $VIRTUAL_ENV
+"let g:pymode_virtualenv_path = $VIRTUAL_ENV
 let g:pymode_lint_ignore = "E501"
 "let g:virtualenv_directory = "$HOME/work/environments/"
 
 
-" TagBar
-nmap <F8> :TagbarToggle<CR>
-
 " Guttentags
 let g:gutentags_ctags_tagfile=".tags"
+
+" CtrlP
+ let g:ctrlp_dont_split = 'NERD'
+
+ " tagbar
+"  let g:tagbar_left = 1
+ let g:tagbar_autofocus = 1
+ let g:tagbar_autoclose = 1
+ let g:tagbar_case_insensitive = 1
+ let g:tagbar_show_visibility = 1
+ let g:tagbar_autoshowtag = 1
+ let g:tagbar_previewwin_pos = 'aboveleft'
+ let g:tagbar_foldlevel = 10
+
+ " Golang
+let g:go_fmt_command = "goimports"
+let g:go_highlight_types = 1
+"let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+" let g:go_highlight_extra_types = 1
+let g:go_auto_type_info = 1
+let g:go_auto_sameids = 1
+
+ " IndentLine
+let g:indentLine_setColors = 0

@@ -10,6 +10,9 @@ au BufNewFile,BufRead *.py set fileformat=unix
 
 let python_highlight_all = 1
 
+" Golang
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 
+
 " White space
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 

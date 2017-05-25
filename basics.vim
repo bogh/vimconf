@@ -1,4 +1,4 @@
-" Basics
+"s Basics
 set nocompatible
 syntax on
 
@@ -14,6 +14,7 @@ set autoindent
 set nostartofline
 set wrap
 
+set autowrite
 set showmatch
 set laststatus=2
 
@@ -25,7 +26,7 @@ nnoremap <C-L> :nohl<CR><C-L> " Clear highlight
 
 " visual bell
 " set visualbell
-set t_vb=
+" set t_vb=
 
 set mouse=a
 
@@ -55,6 +56,7 @@ if has("gui_running")
 	set guioptions-=T 
 	set guioptions-=r
 	set guioptions-=L
+	set guioptions-=m
     set background=dark
     set guifont=Monaco\ 9
 endif
@@ -71,8 +73,8 @@ set foldmethod=indent
 set foldlevel=99
 
 " set clipboard=unnamed
-
-
 set colorcolumn=80
 
 set directory^=$HOME/.vim/tmp/
+
+set tags+=./.tags
