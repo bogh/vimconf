@@ -13,15 +13,18 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'python-mode/python-mode'
 Plugin 'jmcantrell/vim-virtualenv'
+
+
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Plugin 'ap/vim-buftabline'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'vim-scripts/BufOnly.vim'
-" Plugin 'tpope/vim-fugitive'
-"Plugin 'vim-airline/vim-airline'
+"Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
 "Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'airblade/vim-gitgutter'
 " Plugin 'craigemery/vim-autotag'
@@ -31,10 +34,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
-Plugin 'Yggdroot/indentLine'
+"Plugin 'Yggdroot/indentLine'
 
-
-" Golang specific
 
 call vundle#end() 
 
@@ -52,6 +53,22 @@ let NERDTreeQuitOnOpen=0
 let NERDTreeMouseMode=2
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bzr']
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -100,8 +117,9 @@ let g:go_highlight_types = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 " let g:go_highlight_extra_types = 1
+let g:go_def_mode = 'guru'
 let g:go_auto_type_info = 1
 let g:go_auto_sameids = 1
 
  " IndentLine
-let g:indentLine_setColors = 0
+let g:indentLine_setColors = 1

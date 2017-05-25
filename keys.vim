@@ -14,14 +14,14 @@ noremap <C-S-Down> :m .+1<CR>
 noremap <C-S-Up> :m .-2<CR>
 
 noremap <Leader>bd :bdelete<CR> " Close current buffer
-noremap <Leader>ba :BufOnly<CR> " Close all other buffers
+noremap <Leader>bo :BufOnly<CR> " Close all other buffers
 
 " clipboard
 vmap <C-Delete> "+y
 noremap <C-Insert> "+p
 
 " NERDTree
-map <C-k><C-b> :NERDTreeToggle<CR> 
+map <C-n> :NERDTreeToggle<CR> 
 map <C-t> :NERDTreeFocus<CR> 
 nmap <leader>n :NERDTreeFind<CR>
 
@@ -41,10 +41,22 @@ noremap <C-Tab> :bnext<CR>
 noremap <C-S-Tab> :bprevious<CR>
 
 " CtrlP
-noremap <leader>r :CtrlPBufTag<CR>
+noremap <leader>pt :CtrlPBufTag<CR>
+noremap <leader>pb :CtrlPBookmarkDir<CR>
+noremap <leader>pab :CtrlPBookmarkDirAdd<CR>
 
 " Golang
-noremap <leader>.b :GoBuild<CR>
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#cmd#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+autocmd FileType go nmap <leader>.b :<C-u>call <SID>build_go_files()<CR>
+" noremap <leader>.b :GoBuild<CR>
 noremap <leader>.d :GoDecls<CR>
 noremap <leader>.l :GoDeclsDir<CR>
 noremap <leader>.p :GoImport
