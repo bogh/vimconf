@@ -21,9 +21,9 @@ vmap <C-Delete> "+y
 noremap <C-Insert> "+p
 
 " NERDTree
-map <C-n> :NERDTreeToggle<CR> 
-map <C-t> :NERDTreeFocus<CR> 
-nmap <leader>n :NERDTreeFind<CR>
+" map <F2> :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<CR> 
+nmap <F3> :NERDTreeFind<CR>
 
 " Indent / Unindent
   
@@ -44,6 +44,7 @@ noremap <C-S-Tab> :bprevious<CR>
 noremap <leader>pt :CtrlPBufTag<CR>
 noremap <leader>pb :CtrlPBookmarkDir<CR>
 noremap <leader>pab :CtrlPBookmarkDirAdd<CR>
+noremap <leader>be :CtrlPBuffer<CR>
 
 " Golang
 " run :GoBuild or :GoTestCompile based on the go file
